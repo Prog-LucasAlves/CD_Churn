@@ -7,3 +7,6 @@ st.write("""
         """)
 
 st.sidebar.text('Selecione os Dados dos Cliente:')
+
+def getInfoData():
+    SeniorCitizen = st.sidebar.button('Idoso(a)', 'Sim', 'Não')
