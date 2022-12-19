@@ -10,7 +10,7 @@ st.write("""
 st.sidebar.text('Selecione os Dados dos Cliente:')
 
 def getInfoData():
-    SeniorCitizen = st.sidebar.slider('Idoso(a)','Sim', 'Não')
+    SeniorCitizen = st.sidebar.slider('Idoso(a)','Sim', 'Sim', 'Não')
     
     user_data = {
         'idoso':SeniorCitizen
