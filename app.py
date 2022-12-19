@@ -16,7 +16,7 @@ def getInfoData():
         'idoso':SeniorCitizen
     }
     
-    features = pd.DataFrame(user_data, index=0)
+    features = pd.DataFrame(user_data, index=[0])
     
     return features
 
