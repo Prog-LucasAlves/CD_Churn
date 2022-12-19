@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 
 st.write("""
@@ -10,3 +11,15 @@ st.sidebar.text('Selecione os Dados dos Cliente:')
 
 def getInfoData():
     SeniorCitizen = st.sidebar.button('Idoso(a)', 'Sim', 'Não')
+    
+    user_data = {
+        'idoso':SeniorCitizen
+    }
+    
+    features = pd.Dataframe(user_data, index=0)
+    
+    return features
+
+userInputData = getInfoData()
+
+info = st.bar_chart(userInputData)
