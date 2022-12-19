@@ -16,6 +16,10 @@ st.subheader('Informações dos Dados')
 def getInfoData():
     SeniorCitizen = st.sidebar.slider(f'Idoso(a) 0->Não | 1->Sim',0, 0, 1)
     Partner = st.sidebar.slider('Tem Parceiro(a) 0->Não | 1-Sim',0 ,0 ,1)
+    cm_expander = st.sidebar.beta_expander("Application Cat - 1 ",expanded=True)
+    sa_button_clicked = cm_expander.button("Application - 1")
+    sr_button_clicked = cm_expander.button("Application - 2")
+    sb_button_clicked = cm_expander.button("Application - 3")
     
     user_data = {
         'idoso':SeniorCitizen,
