@@ -18,9 +18,14 @@ def getInfoData():
     Partner = st.sidebar.slider('Tem Parceiro(a) 0->Não | 1-Sim',0 ,0 ,1)
     cm_expander = st.sidebar.expander("Application Cat - 1 ",expanded=True)
     sa_button_clicked = cm_expander.button("Application - 1")
-    st.write(sa_button_clicked)
+    st.sidebar.write(sa_button_clicked)
     sr_button_clicked = cm_expander.button("Application - 2")
     sb_button_clicked = cm_expander.button("Application - 3")
+    
+    if sa_button_clicked is True:
+        a = 1
+        
+        st.write(a)
     
     user_data = {
         'idoso':SeniorCitizen,
