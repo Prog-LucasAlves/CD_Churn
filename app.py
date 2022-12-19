@@ -22,4 +22,6 @@ def getInfoData():
 
 userInputData = getInfoData()
 
-info = st.bar_chart(userInputData)
+grafico = st.bar_chart(userInputData)
+st.subheader('Dados')
+st.write(userInputData)
