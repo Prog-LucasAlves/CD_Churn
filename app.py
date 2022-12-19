@@ -10,13 +10,13 @@ st.write("""
 st.sidebar.text('Selecione os Dados dos Cliente:')
 
 def getInfoData():
-    SeniorCitizen = st.sidebar.slider('Idoso(a)',0, 0, 1)
+    SeniorCitizen = st.sidebar.slider(f'Idoso(a) 0->Não | 1->Sim',0, 0, 1)
     
     user_data = {
         'idoso':SeniorCitizen
     }
     
-    features = pd.Dataframe(user_data, index=0)
+    features = pd.DataFrame(user_data, index=0)
     
     return features
 
