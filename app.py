@@ -9,7 +9,9 @@ st.write("""
 
 st.sidebar.text('Selecione os Dados dos Cliente:')
 
-st.subheader('Informações dos Dodos')
+st.write("-----------------------------------------")
+
+st.subheader('Informações dos Dados')
 
 def getInfoData():
     SeniorCitizen = st.sidebar.slider(f'Idoso(a) 0->Não | 1->Sim',0, 0, 1)
