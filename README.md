@@ -13,3 +13,5 @@
 - [] - Analisar os dados (Limpeza e Transformação dos dados)
 - [] - Previssão de churn
 - [] - Deploy do Modelo
+
+![progress](https://progress-bar.dev/10/?title=completed "progresso")
