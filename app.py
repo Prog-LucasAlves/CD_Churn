@@ -15,7 +15,7 @@ st.subheader('Informações dos Dados')
 
 def getInfoData():
     SeniorCitizen = st.sidebar.slider(f'Idoso(a) 0->Não | 1->Sim',0, 0, 1)
-    Partner = st.slider('Tem Parceiro(a) 0->Não | 1-Sim',0 ,0 ,1)
+    Partner = st.sidebar.slider('Tem Parceiro(a) 0->Não | 1-Sim',0 ,0 ,1)
     
     user_data = {
         'idoso':SeniorCitizen,
