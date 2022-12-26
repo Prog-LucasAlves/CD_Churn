@@ -23,8 +23,10 @@
 
 ## Resultado
 
-| Modelo | Dataset | Resultado |
-| ------ | ------- | --------- |
+| Modelo | Dataset | Coluna(s) Eliminadas | Resultado(Metrica: 'f1') | Acurácia |
+| ------ | ------- | -------------------- |------------------------- | -------- |
+| Regressao Logistica | Data_Transformedv1.0.csv | Nenhuma | 58.80 | 81.54% |
+| Regressao Logistica | Data_Transformedv1.0.csv | Nenhuma | 58.80 | 81.54% |
 
 ## Planejamento
 
