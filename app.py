@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import time
 
 
 @st.cache(suppress_st_warning=True)
@@ -42,14 +41,22 @@ tenure = st.sidebar.number_input('Quantos Meses o Cliente esta na Empresa:', ste
 st.sidebar.write('You selected:', tenure)
 
 user_data = {
-    'Idoso': a,
+    'Idoso(a)': a,
     'Tem Dependente': b,
     'Meses como Cliente': tenure
             }
 
-features = pd.DataFrame(user_data, index=[0])
+user_info = {
+    'Idoso(a)': SeniorCitizen,
+    'Tem Dependente': Dependents,
+    'Meses como Cliente': tenure
+}
 
-userInputData = features         
+features_data = pd.DataFrame(user_data, index=[0])
+features_info = pd.DataFrame(user_info, index=[0])
+
+st.subheader('Dados Do Cliente Para Modelo:')
+st.write(features_data)
 
 st.subheader('Dados Do Cliente:')
-st.write(features)
+st.write(features_info)
