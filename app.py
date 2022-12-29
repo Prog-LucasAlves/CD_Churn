@@ -14,22 +14,24 @@ st.write("-----------------------------------------")
 st.subheader('Informações dos Dados')
 
 def getInfoData():
-    SeniorCitizen = st.sidebar.slider(f'Idoso(a) 0->Não | 1->Sim',0, 0, 1)
-    Partner = st.sidebar.slider('Tem Parceiro(a) 0->Não | 1-Sim',0 ,0 ,1)
-    cm_expander = st.sidebar.expander("Application Cat - 1 ",expanded=True)
-    sa_button_clicked = cm_expander.button("Application - 1")
-    st.sidebar.write(sa_button_clicked)
-    sr_button_clicked = cm_expander.button("Application - 2")
-    sb_button_clicked = cm_expander.button("Application - 3")
+    SeniorCitizen = st.sidebar.expander("Idoso(a)")
+    nSeniorCitizen = SeniorCitizen.button("Não")
+    ySeniorCitizen = SeniorCitizen.button("Sim")
     
-    if sa_button_clicked is True:
-        a = 1
+    st.sidebar.write(nSeniorCitizen)
+    st.sidebar.write(ySeniorCitizen)
+    
+    if nSeniorCitizen is True:
+        a = 0
         
         st.write(a)
     
+    else:
+        a = 1
+    
     user_data = {
-        'idoso':SeniorCitizen,
-        'parceiro':Partner
+        'idoso':a,
+
     }
     
     features = pd.DataFrame(user_data, index=[0])
