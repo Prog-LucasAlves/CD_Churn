@@ -23,8 +23,8 @@ def getInfoData():
     nSeniorCitizen = ExpanderP.button("Não")
     ySeniorCitizen = ExpanderP.button("Sim")
     ExpanderP.text('Tem Dependente:')
-    nDependents = ExpanderP.button("l")
-    yDependents = ExpanderP.button("S")
+    nDependents = ExpanderP.button("Não")
+    yDependents = ExpanderP.button("Sim")
 
     user_data = {
         'Idoso': a,
