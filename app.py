@@ -28,6 +28,7 @@ def getInfoData():
     if ySeniorCitizen is True:
         a = 1
 
+    b = 0
     ExpanderP.text('Tem Dependente:')
     nDependents = ExpanderP.button("Não", key=3)
     yDependents = ExpanderP.button("Sim", key=4)
