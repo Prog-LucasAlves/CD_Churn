@@ -24,17 +24,26 @@ st.sidebar.header('Informações dos Clientes:')
 a = 0
 SeniorCitizen = st.sidebar.selectbox('Cliente e Idoso(a):',
                                     ('Não', 'Sim'))
-st.write('You selected:', SeniorCitizen)
-
+st.sidebar.write('You selected:', SeniorCitizen)
 
 if SeniorCitizen == 'Não':
     a = 0
 if SeniorCitizen == 'Sim':
     a = 1
-        
+
+b = 0
+Dependents = st.sidebar.selectbox('Cliente tem Dependente:',
+                                    ('Não', 'Sim'))
+st.sidebar.write('You selected:', Dependents)
+
+if Dependents == 'Não':
+    a = 0
+if Dependents == 'Sim':
+    a = 1
 
 user_data = {
         'Idoso': a,
+        'Tem Dependente': b,
     }
 
 features = pd.DataFrame(user_data, index=[0])
