@@ -1,5 +1,8 @@
 import pandas as pd
 import streamlit as st
+from streamlit_disqus import st_disqus
+
+st_disqus("streamlit-disqus-demo")
 
 st.write("""
         Previsão de Churn\n
