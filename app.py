@@ -39,10 +39,8 @@ if yDependents is True:
     }
 
 features = pd.DataFrame(user_data, index=[0])
-    
-
 
 userInputData = features                 
 
 st.subheader('Dados Do Cliente:')
-st.write(userInputData)
+st.write(features)
