@@ -34,9 +34,9 @@ def getInfoData():
     yDependents = st.sidebar.button('Sim', key=4)
 
     if nDependents is True:
-        a = 0
+        b = 0
     if yDependents is True:
-        a = 1
+        b = 1
 
     user_data = {
         'Idoso': a,
