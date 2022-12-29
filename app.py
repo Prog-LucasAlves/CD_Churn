@@ -16,7 +16,8 @@ st.write("-----------------------------------------")
 
 
 def getInfoData():
-
+    
+    '''
     a = 0
     SeniorCitizen = st.sidebar.expander("Idoso(a):")
     nSeniorCitizen = SeniorCitizen.button("Não")
@@ -26,6 +27,7 @@ def getInfoData():
         a = 0
     if ySeniorCitizen is True:
         a = 1
+    '''
 
     b = 0
     Dependents = st.sidebar.expander("Tem Dependente:")
@@ -38,8 +40,8 @@ def getInfoData():
         b = 1
 
     user_data = {
-        'Idoso': a,
-        'Tem Dependente': b
+        #'Idoso': a,
+        'Tem Dependente': b,
     }
 
     features = pd.DataFrame(user_data, index=[0])
