@@ -17,27 +17,16 @@ st.write("-----------------------------------------")
 #@st.cache()
 def getInfoData():
 
+    st.sidebar.header('Informações dos Clientes:')
     a = 0
-    ExpanderP = st.sidebar.expander("Informações", expanded=True)
-    ExpanderP.text('Idoso(a):')
-    nSeniorCitizen = ExpanderP.button("Não", key=1)
-    ySeniorCitizen = ExpanderP.button("Sim", key=2)
-
+    st.sidebar.text('Idoso(a):')
+    nSeniorCitizen = st.sidebar.button('Não', key=1)
+    ySeniorCitizen = st.sidebar.button('Sim', key=2)
+    
     if nSeniorCitizen is True:
         a = 0
     if ySeniorCitizen is True:
         a = 1
-
-    ExpanderZ = st.sidebar.expander("Informações", expanded=True)
-    b = 0
-    ExpanderZ.text('Tem Dependente:')
-    nDependents = ExpanderZ.button("Não", key=3)
-    yDependents = ExpanderZ.button("Sim", key=4)
-
-    if nDependents is True:
-        b = 0
-    if yDependents is True:
-        b = 1
 
     user_data = {
         'Idoso': a,
