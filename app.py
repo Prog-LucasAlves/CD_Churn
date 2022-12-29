@@ -14,7 +14,7 @@ st.sidebar.text('Selecione os Dados dos Cliente:')
 
 st.write("-----------------------------------------")
 
-@st.cache
+@st.cache(suppress_st_warning=True)
 def getInfoData():
 
     a = 0
