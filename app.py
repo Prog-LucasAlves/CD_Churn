@@ -18,26 +18,25 @@ st.write("-----------------------------------------")
 def getInfoData():
 
     a = 0
-    SeniorCitizen = st.sidebar.expander("Informações", expanded=True)
-    SeniorCitizen.text('Idoso(a):')
-    nSeniorCitizen = SeniorCitizen.button("Não")
-    ySeniorCitizen = SeniorCitizen.button("Sim")
+    ExpanderP = st.sidebar.expander("Informações", expanded=True)
+    ExpanderP.text('Idoso(a):')
+    nSeniorCitizen = ExpanderP.button("Não")
+    ySeniorCitizen = ExpanderP.button("Sim")
 
-    SeniorCitizen.text('Tem Dependente::')
     if nSeniorCitizen is True:
         a = 0
     if ySeniorCitizen is True:
         a = 1
 
     b = 0
-    Dependents = st.sidebar.expander("Tem Dependente:")
-    #nDependents = Dependents.button("Não")
-    #yDependents = Dependents.button("Sim")
+    ExpanderP.text('Tem Dependente::')
+    nDependents = ExpanderP.button("Não")
+    yDependents = ExpanderP.button("Sim")
 
-    #if nDependents is True:
-        #b = 0
-    #if yDependents is True:
-       # b = 1
+    if nDependents is True:
+        b = 0
+    if yDependents is True:
+        b = 1
 
     user_data = {
         'Idoso': a,
