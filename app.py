@@ -41,9 +41,13 @@ if Dependents == 'Não':
 if Dependents == 'Sim':
     b = 1
 
+tenure = st.sidebar.number_input('Quantos Meses o Cliente esta na Empresa:')
+st.write('You selected:', tenure)
+
 user_data = {
         'Idoso': a,
         'Tem Dependente': b,
+        'Meses como Cliente': tenure
     }
 
 features = pd.DataFrame(user_data, index=[0])
