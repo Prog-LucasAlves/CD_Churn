@@ -27,6 +27,16 @@ def getInfoData():
         a = 0
     if ySeniorCitizen is True:
         a = 1
+        
+    b = 0
+    st.sidebar.text('Idoso(a):')
+    nDependents = st.sidebar.button('Não', key=3)
+    yDependents = st.sidebar.button('Sim', key=4)
+
+    if nDependents is True:
+        a = 0
+    if yDependents is True:
+        a = 1
 
     user_data = {
         'Idoso': a,
