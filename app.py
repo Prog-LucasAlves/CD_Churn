@@ -14,20 +14,18 @@ st.write("-----------------------------------------")
 st.subheader('Informações dos Dados')
 
 def getInfoData():
+
     SeniorCitizen = st.sidebar.expander("Idoso(a)")
     nSeniorCitizen = SeniorCitizen.button("Não")
     ySeniorCitizen = SeniorCitizen.button("Sim")
-    
+
     if nSeniorCitizen is True:
         a = 0
-        
-        st.write(a)
-    
-    else:
+    if ySeniorCitizen is True:
         a = 1
-    
+        
     user_data = {
-        'idoso':a,
+        'idoso': a,
 
     }
     
