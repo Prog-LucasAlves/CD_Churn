@@ -18,9 +18,6 @@ def getInfoData():
     nSeniorCitizen = SeniorCitizen.button("Não")
     ySeniorCitizen = SeniorCitizen.button("Sim")
     
-    st.sidebar.write(nSeniorCitizen)
-    st.sidebar.write(ySeniorCitizen)
-    
     if nSeniorCitizen is True:
         a = 0
         
@@ -40,6 +37,5 @@ def getInfoData():
 
 userInputData = getInfoData()
 
-grafico = st.bar_chart(userInputData)
 st.subheader('Dados Do Cliente:')
 st.write(userInputData)
