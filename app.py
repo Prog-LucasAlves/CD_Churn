@@ -29,9 +29,10 @@ def getInfoData():
         a = 1
 
     b = 0
-    ExpanderP.text('Tem Dependente::')
-    nDependents = ExpanderP.button("Não")
-    yDependents = ExpanderP.button("Sim")
+    ExpanderZ = st.sidebar.expander("Informações", expanded=True)
+    ExpanderZ.text('Tem Dependente:')
+    nDependents = ExpanderZ.button("Não")
+    yDependents = ExpanderZ.button("Sim")
 
     if nDependents is True:
         b = 0
