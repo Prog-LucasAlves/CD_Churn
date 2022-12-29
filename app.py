@@ -11,10 +11,9 @@ st.sidebar.text('Selecione os Dados dos Cliente:')
 
 st.write("-----------------------------------------")
 
-st.subheader('Informações dos Dados')
-
 def getInfoData():
 
+    a = []
     SeniorCitizen = st.sidebar.expander("Idoso(a)")
     nSeniorCitizen = SeniorCitizen.button("Não")
     ySeniorCitizen = SeniorCitizen.button("Sim")
@@ -23,15 +22,15 @@ def getInfoData():
         a = 0
     if ySeniorCitizen is True:
         a = 1
-        
+
     user_data = {
-        'idoso': a,
+        'idoso':a,
 
     }
-    
+
     features = pd.DataFrame(user_data, index=[0])
-    
     return features
+
 
 userInputData = getInfoData()
 
