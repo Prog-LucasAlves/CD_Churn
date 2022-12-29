@@ -19,6 +19,7 @@ def getInfoData():
 
     a = 0
     SeniorCitizen = st.sidebar.expander("Idoso(a):")
+    st.sidebar.text('Idoso(a):')
     nSeniorCitizen = SeniorCitizen.button("Não")
     ySeniorCitizen = SeniorCitizen.button("Sim")
 
