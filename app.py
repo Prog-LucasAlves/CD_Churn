@@ -20,11 +20,22 @@ def getInfoData():
     a = 0
     ExpanderP = st.sidebar.expander("Informações", expanded=True)
     ExpanderP.text('Idoso(a):')
-    nSeniorCitizen = ExpanderP.button("Não", key=1)
-    ySeniorCitizen = ExpanderP.button("Sim")
+    nSeniorCitizen = ExpanderP.button("Não", key=1, on_click=True)
+    ySeniorCitizen = ExpanderP.button("Sim", key=2, on_click=True)
+
+    if nSeniorCitizen is True:
+        a = 0
+    if ySeniorCitizen is True:
+        a = 1
+
     ExpanderP.text('Tem Dependente:')
     nDependents = ExpanderP.button("Não", key=3)
-    yDependents = ExpanderP.button("Sim")
+    yDependents = ExpanderP.button("Sim", key=4)
+
+    if nDependents is True:
+        b = 0
+    if yDependents is True:
+        b = 1
 
     user_data = {
         'Idoso': a,
