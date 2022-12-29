@@ -37,9 +37,9 @@ Dependents = st.sidebar.selectbox('Cliente tem Dependente:',
 st.sidebar.write('You selected:', Dependents)
 
 if Dependents == 'Não':
-    a = 0
+    b = 0
 if Dependents == 'Sim':
-    a = 1
+    b = 1
 
 user_data = {
         'Idoso': a,
