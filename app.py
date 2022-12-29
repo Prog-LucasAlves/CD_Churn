@@ -14,10 +14,11 @@ st.sidebar.text('Selecione os Dados dos Cliente:')
 
 st.write("-----------------------------------------")
 
+
 def getInfoData():
 
     a = 0
-    SeniorCitizen = st.sidebar.expander("Idoso(a)")
+    SeniorCitizen = st.sidebar.expander("Idoso(a):")
     nSeniorCitizen = SeniorCitizen.button("Não")
     ySeniorCitizen = SeniorCitizen.button("Sim")
 
@@ -26,9 +27,19 @@ def getInfoData():
     if ySeniorCitizen is True:
         a = 1
 
-    user_data = {
-        'idoso':a,
+    b = 0
+    Dependents = st.sidebar.expander("Tem Dependente:")
+    nDependents = Dependents.button("Não")
+    yDependents = Dependents.button("Sim")
 
+    if nDependents is True:
+        b = 0
+    if yDependents is True:
+        b = 1
+
+    user_data = {
+        'Idoso': a,
+        'Tem Dependente': b
     }
 
     features = pd.DataFrame(user_data, index=[0])
