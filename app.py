@@ -36,6 +36,9 @@ if nDependents is True:
     b = 0
 if yDependents is True:
     b = 1
+    
+st.write(a)
+st.write(b)
 
 user_data = {
         'Idoso': a,
