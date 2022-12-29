@@ -35,7 +35,7 @@ if yDependents is True:
 
     user_data = {
         'Idoso': a,
-        'Tem Dependente': b,
+        'Tem Dependente': b
     }
 
 features = pd.DataFrame(user_data, index=[0])
