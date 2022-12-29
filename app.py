@@ -14,7 +14,7 @@ st.sidebar.text('Selecione os Dados dos Cliente:')
 
 st.write("-----------------------------------------")
 
-#@st.cache()
+@st.cache()
 def getInfoData():
 
     st.sidebar.header('Informações dos Clientes:')
