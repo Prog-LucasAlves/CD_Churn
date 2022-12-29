@@ -38,7 +38,7 @@ if Dependents == 'Não':
 if Dependents == 'Sim':
     b = 1
 
-tenure = st.sidebar.number_input('Quantos Meses o Cliente esta na Empresa:', value=int)
+tenure = st.sidebar.number_input('Quantos Meses o Cliente esta na Empresa:', min_value=0, max_value=72, value=int)
 st.sidebar.write('You selected:', tenure)
 
 user_data = {
