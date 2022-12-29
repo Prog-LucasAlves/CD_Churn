@@ -31,7 +31,7 @@ def getInfoData():
     b = 0
     ExpanderZ = st.sidebar.expander("Informações", expanded=True)
     ExpanderZ.text('Tem Dependente:')
-    nDependents = ExpanderZ.button("Não")
+    nDependents = ExpanderZ.button(4)
     yDependents = ExpanderZ.button("Sim")
 
     if nDependents is True:
