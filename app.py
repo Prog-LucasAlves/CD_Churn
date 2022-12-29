@@ -13,7 +13,7 @@ st.write("-----------------------------------------")
 
 def getInfoData():
 
-    a = []
+    a = 0
     SeniorCitizen = st.sidebar.expander("Idoso(a)")
     nSeniorCitizen = SeniorCitizen.button("Não")
     ySeniorCitizen = SeniorCitizen.button("Sim")
