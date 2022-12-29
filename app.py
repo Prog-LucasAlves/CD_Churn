@@ -15,40 +15,38 @@ st.sidebar.text('Selecione os Dados dos Cliente:')
 st.write("-----------------------------------------")
 
 
-def getInfoData():
+a = 0
+ExpanderP = st.sidebar.expander("Informações", expanded=True)
+ExpanderP.text('Idoso(a):')
+nSeniorCitizen = ExpanderP.button("Não", key=1)
+ySeniorCitizen = ExpanderP.button("Sim", key=2)
 
+if nSeniorCitizen is True:
     a = 0
-    ExpanderP = st.sidebar.expander("Informações", expanded=True)
-    ExpanderP.text('Idoso(a):')
-    nSeniorCitizen = ExpanderP.button("Não", key=1)
-    ySeniorCitizen = ExpanderP.button("Sim", key=2)
+if ySeniorCitizen is True:
+    a = 1
 
-    if nSeniorCitizen is True:
-        a = 0
-    if ySeniorCitizen is True:
-        a = 1
+ExpanderZ = st.sidebar.expander("Informações", expanded=True)
+b = 0
+ExpanderZ.text('Tem Dependente:')
+nDependents = ExpanderZ.button("Não", key=3)
+yDependents = ExpanderZ.button("Sim", key=4)
 
-    ExpanderZ = st.sidebar.expander("Informações", expanded=True)
+if nDependents is True:
     b = 0
-    ExpanderZ.text('Tem Dependente:')
-    nDependents = ExpanderZ.button("Não", key=3)
-    yDependents = ExpanderZ.button("Sim", key=4)
+if yDependents is True:
+    b = 1
 
-    if nDependents is True:
-        b = 0
-    if yDependents is True:
-        b = 1
-
-    user_data = {
+user_data = {
         'Idoso': a,
         'Tem Dependente': b,
     }
 
-    features = pd.DataFrame(user_data, index=[0])
-    return features
+features = pd.DataFrame(user_data, index=[0])
 
 
-userInputData = getInfoData()                    
+
+userInputData = features                   
 
 st.subheader('Dados Do Cliente:')
 st.write(userInputData)
