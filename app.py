@@ -65,12 +65,23 @@ elif Contract == 'Anual':
 else:
     d = 2
 
+e = 0
+PaperlessBilling = st.sidebar.selectbox('Fatura é via papel:',
+                                        'Não','Sim')
+st.sidebar.write('You Selected:', PaperlessBilling)
+
+if PaperlessBilling == 'Não':
+    e = 0
+else: 
+    e = 1
+
 user_data = {
     'Idoso(a)': a,
     'Tem Dependente': b,
     'Meses como Cliente': tenure,
     'Possui Serviço de Internet': c,
-    'Duração do Contrato': d
+    'Duração do Contrato': d,
+    'Fatura é via papel': e
 }
 
 user_info = {
@@ -78,16 +89,21 @@ user_info = {
     'Tem Dependente': Dependents,
     'Meses como Cliente': tenure,
     'Possui Serviço de Internet': InternetService,
-    'Duração do Contrato': Contract
+    'Duração do Contrato': Contract,
+    'Fatura é via papel': PaperlessBilling
 }
 
 features_data = pd.DataFrame(user_data, index=[0])
 features_info = pd.DataFrame(user_info, index=[0])
 
-st.subheader('⚙️ Dados Do Cliente Para Modelo:')
-st.write(features_data)
+st.subheader('👪 Dados Do Cliente:')
+st.write(features_info)
 
 st.write("-----------------------------------------")
 
-st.subheader('👪 Dados Do Cliente:')
-st.write(features_info)
+st.subheader('⚙️ Dados Do Cliente Para Modelo:')
+st.write(features_data)
+
+
+
+
