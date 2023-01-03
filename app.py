@@ -67,7 +67,7 @@ else:
 
 e = 0
 PaperlessBilling = st.sidebar.selectbox('Fatura é via papel:',
-                                        'Não','Sim')
+                                        ('Não','Sim'))
 st.sidebar.write('You Selected:', PaperlessBilling)
 
 if PaperlessBilling == 'Não':
