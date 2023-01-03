@@ -53,18 +53,32 @@ if InternetService == 'Não':
 else:
     c = 1
 
+d = 0
+Contract = st.sidebar.selectbox('Duração do Contrato:',
+                                ('Mensal','Anual','Bienal'))
+st.sidebar.write('You Selected:', Contract)
+
+if Contract == 'Mensal':
+    d = 0
+elif Contract == 'Anual':
+    d = 1
+else:
+    d = 2
+
 user_data = {
     'Idoso(a)': a,
     'Tem Dependente': b,
     'Meses como Cliente': tenure,
-    'Possui Serviço de Internet': c
+    'Possui Serviço de Internet': c,
+    'Duração do Contrato': d
 }
 
 user_info = {
     'Idoso(a)': SeniorCitizen,
     'Tem Dependente': Dependents,
     'Meses como Cliente': tenure,
-    'Possui Serviço de Internet': InternetService
+    'Possui Serviço de Internet': InternetService,
+    'Duração do Contrato': Contract
 }
 
 features_data = pd.DataFrame(user_data, index=[0])
