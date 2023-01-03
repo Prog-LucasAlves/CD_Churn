@@ -84,7 +84,7 @@ user_info = {
     'Fatura é via papel': PaperlessBilling
 }
 features_info = pd.DataFrame(user_info, index=[0])
-features_info_list = features_info.values.tolist()
+features_info = features_info.T
 
 user_data = {
     'Idoso(a)': a,
@@ -96,15 +96,11 @@ user_data = {
 }
 features_data = pd.DataFrame(user_data, index=[0])
 features_data = features_data.T
-features_data_list = [features_data.columns.values.tolist()] + features_data.values.tolist()
 
 st.subheader('👪 Dados Do Cliente:')
 st.write(features_info)
-st.write(features_info_list)
 
 st.write("-----------------------------------------")
 
 st.subheader('⚙️ Dados Do Cliente Para Modelo:')
 st.write(features_data)
-st.write(features_data_list)
-
