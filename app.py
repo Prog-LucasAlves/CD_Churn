@@ -95,6 +95,7 @@ user_data = {
     'Fatura é via papel': e
 }
 features_data = pd.DataFrame(user_data, index=[0])
+features_data = features_data.T
 features_data_list = [features_data.columns.values.tolist()] + features_data.values.tolist()
 
 st.subheader('👪 Dados Do Cliente:')
