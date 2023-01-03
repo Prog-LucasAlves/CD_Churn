@@ -43,16 +43,28 @@ tenure = st.sidebar.number_input('Quantos Meses o Cliente esta na Empresa:',
                                  max_value=75)
 st.sidebar.write('You selected:', tenure)
 
+c = 0
+InternetService = st.sidebar.selectbox('Possui Serviço de Internet:',
+                                       ('Não', 'Sim'))
+st.sidebar.write('You Selected:', InternetService)
+
+if InternetService == 'Não':
+    c = 0
+else:
+    c = 1
+
 user_data = {
     'Idoso(a)': a,
     'Tem Dependente': b,
-    'Meses como Cliente': tenure
+    'Meses como Cliente': tenure,
+    'Possui Serviço de Internet': c
 }
 
 user_info = {
     'Idoso(a)': SeniorCitizen,
     'Tem Dependente': Dependents,
-    'Meses como Cliente': tenure
+    'Meses como Cliente': tenure,
+    'Possui Serviço de Internet': InternetService
 }
 
 features_data = pd.DataFrame(user_data, index=[0])
@@ -60,6 +72,8 @@ features_info = pd.DataFrame(user_info, index=[0])
 
 st.subheader('⚙️ Dados Do Cliente Para Modelo:')
 st.write(features_data)
+
+st.write("-----------------------------------------")
 
 st.subheader('👪 Dados Do Cliente:')
 st.write(features_info)

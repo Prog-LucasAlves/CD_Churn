@@ -49,12 +49,14 @@
 
 ## Planejamento
 
-- [ ] - Analisar os dados (Limpeza e Transformação dos dados)
-- [ ] - Previssão de churn
+- [x] - Analisar os dados (Limpeza e Transformação dos dados)
+- [x] - Previssão de churn
 - [ ] - Deploy do Modelo
 
 ## App(Streamlit)
 
 - [APP](https://cd-churn.streamlit.app/)
 
-![progress](https://progress-bar.dev/10/?title=completed "progresso")
+![progress](https://progress-bar.dev/60/?title=completed "progresso")
+
+[![Linter](https://github.com/Prog-LucasAlves/CD_Churn/actions/workflows/Linter.yml/badge.svg)](https://github.com/Prog-LucasAlves/CD_Churn/actions/workflows/Linter.yml)
