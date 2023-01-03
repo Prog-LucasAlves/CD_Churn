@@ -75,15 +75,6 @@ if PaperlessBilling == 'Não':
 else: 
     e = 1
 
-user_data = {
-    'Idoso(a)': a,
-    'Tem Dependente': b,
-    'Meses como Cliente': tenure,
-    'Possui Serviço de Internet': c,
-    'Duração do Contrato': d,
-    'Fatura é via papel': e
-}
-
 user_info = {
     'Idoso(a)': SeniorCitizen,
     'Tem Dependente': Dependents,
@@ -92,18 +83,27 @@ user_info = {
     'Duração do Contrato': Contract,
     'Fatura é via papel': PaperlessBilling
 }
-
-features_data = pd.DataFrame(user_data, index=[0])
 features_info = pd.DataFrame(user_info, index=[0])
+features_info_list = features_info.values.tolist()
+
+user_data = {
+    'Idoso(a)': a,
+    'Tem Dependente': b,
+    'Meses como Cliente': tenure,
+    'Possui Serviço de Internet': c,
+    'Duração do Contrato': d,
+    'Fatura é via papel': e
+}
+features_data = pd.DataFrame(user_data, index=[0])
+features_data_list = features_data.values.tolist()
 
 st.subheader('👪 Dados Do Cliente:')
 st.write(features_info)
+st.write(features_info_list)
 
 st.write("-----------------------------------------")
 
 st.subheader('⚙️ Dados Do Cliente Para Modelo:')
 st.write(features_data)
-
-
-
+st.write(features_data_list)
 
