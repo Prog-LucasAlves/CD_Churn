@@ -55,7 +55,7 @@ else:
 
 d = 0
 Contract = st.sidebar.selectbox('Duração do Contrato:',
-                                ('Mensal','Anual','Bienal'))
+                                ('Mensal', 'Anual', 'Bienal'))
 st.sidebar.write('You Selected:', Contract)
 
 if Contract == 'Mensal':
@@ -67,13 +67,16 @@ else:
 
 e = 0
 PaperlessBilling = st.sidebar.selectbox('Fatura é via papel:',
-                                        ('Não','Sim'))
+                                        ('Não', 'Sim'))
 st.sidebar.write('You Selected:', PaperlessBilling)
 
 if PaperlessBilling == 'Não':
     e = 0
-else: 
+else:
     e = 1
+
+f = 0
+PaymentMethod = 1
 
 user_info = {
     'Idoso(a)': SeniorCitizen,
@@ -104,3 +107,5 @@ st.write("-----------------------------------------")
 
 st.subheader('⚙️ Dados Do Cliente Para Modelo:')
 st.write(features_data)
+
+st.write("-----------------------------------------")
