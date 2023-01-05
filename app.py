@@ -18,15 +18,15 @@ st.sidebar.text('Selecione os Dados dos Cliente:')
 st.write("-----------------------------------------")
 
 st.sidebar.header('Informações dos Clientes:')
-a = 0
+a = int(0)
 SeniorCitizen = st.sidebar.selectbox('Cliente e Idoso(a):',
                                      ('Não', 'Sim'))
 st.sidebar.write('You selected:', SeniorCitizen)
 
 if SeniorCitizen == 'Não':
-    a = 0
+    a = int(0)
 if SeniorCitizen == 'Sim':
-    a = 1
+    a = int(1)
 
 b = 0
 Dependents = st.sidebar.selectbox('Cliente tem Dependente:',
