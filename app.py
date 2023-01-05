@@ -96,7 +96,7 @@ st.sidebar.write('You selected:', MonthlyCharges)
 TotalCharges = MonthlyCharges * tenure
 
 user_info = {
-    'Idoso(a)': int(SeniorCitizen),
+    'Idoso(a)': SeniorCitizen,
     'Tem Dependente': Dependents,
     'Meses como Cliente': tenure,
     'Possui Serviço de Internet': InternetService,
@@ -107,6 +107,7 @@ user_info = {
     'Valor Total dos Serviços desde o Inicio': round(TotalCharges, 2)
 }
 features_info = pd.DataFrame(user_info, index=[0])
+st.write(features_info.dtypes)
 features_info = features_info.T
 
 user_data = {
