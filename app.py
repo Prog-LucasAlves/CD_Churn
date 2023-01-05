@@ -92,7 +92,6 @@ else:
 
 g = 0
 MonthlyCharges = st.sidebar.number_input('Valor da Mensalidade:',
-                                 step=0.01,
                                  max_value=75)
 st.sidebar.write('You selected:', MonthlyCharges)
 
