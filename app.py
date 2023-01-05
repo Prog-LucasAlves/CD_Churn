@@ -107,7 +107,6 @@ user_info = {
     'Valor Total dos Serviços desde o Inicio': round(TotalCharges, 2)
 }
 features_info = pd.DataFrame(user_info, index=[0])
-st.write(features_info.dtypes)
 features_info = features_info.T
 
 user_data = {
@@ -131,5 +130,6 @@ st.write("-----------------------------------------")
 
 st.subheader('⚙️ Dados Do Cliente Para Modelo:')
 st.write(features_data)
+st.write(features_data.dtypes)
 
 st.write("-----------------------------------------")
