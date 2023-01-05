@@ -103,7 +103,7 @@ user_info = {
     'Duração do Contrato': Contract,
     'Fatura é via papel': PaperlessBilling,
     'Meio de Pagamento': PaymentMethod,
-    'Valor da Mensalidade': MonthlyCharges,
+    'Valor da Mensalidade': round(MonthlyCharges, 2),
     'Valor Total dos Serviços desde o Inicio': TotalCharges
 }
 features_info = pd.DataFrame(user_info, index=[0])
