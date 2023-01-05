@@ -96,7 +96,7 @@ st.sidebar.write('You selected:', MonthlyCharges)
 TotalCharges = MonthlyCharges * tenure
 
 user_info = {
-    'Idoso(a)': SeniorCitizen,
+    'Idoso(a)': round(SeniorCitizen, 0),
     'Tem Dependente': Dependents,
     'Meses como Cliente': tenure,
     'Possui Serviço de Internet': InternetService,
@@ -104,7 +104,7 @@ user_info = {
     'Fatura é via papel': PaperlessBilling,
     'Meio de Pagamento': PaymentMethod,
     'Valor da Mensalidade': round(MonthlyCharges, 2),
-    'Valor Total dos Serviços desde o Inicio': TotalCharges
+    'Valor Total dos Serviços desde o Inicio': round(TotalCharges, 2)
 }
 features_info = pd.DataFrame(user_info, index=[0])
 features_info = features_info.T
@@ -117,8 +117,8 @@ user_data = {
     'Duração do Contrato': d,
     'Fatura é via papel': e,
     'Meio de Pagamento': f,
-    'Valor da Mensalidade': MonthlyCharges,
-    'Valor Total dos Serviços desde o Inicio': TotalCharges
+    'Valor da Mensalidade': round(MonthlyCharges, 2),
+    'Valor Total dos Serviços desde o Inicio': round(TotalCharges, 2)
 }
 features_data = pd.DataFrame(user_data, index=[0])
 features_data = features_data.T
