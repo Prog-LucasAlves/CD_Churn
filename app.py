@@ -96,7 +96,7 @@ st.sidebar.write('You selected:', MonthlyCharges)
 TotalCharges = MonthlyCharges * tenure
 
 user_info = {
-    'Idoso(a)': round(SeniorCitizen, 0),
+    'Idoso(a)': int(SeniorCitizen),
     'Tem Dependente': Dependents,
     'Meses como Cliente': tenure,
     'Possui Serviço de Internet': InternetService,
