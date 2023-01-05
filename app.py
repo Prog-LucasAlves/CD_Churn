@@ -76,7 +76,25 @@ else:
     e = 1
 
 f = 0
-PaymentMethod = 1
+PaymentMethod = st.sidebar.selectbox('Meio de Pagamento:',
+                                     ('Fatura via Correios', 'Fatura via E-mail',
+                                      'Transferência Bancária', 'Cartão de Credito'))
+st.sidebar.write('You selected:', PaymentMethod)
+
+if PaymentMethod == 'Fatura via Correios':
+    f = 0
+elif PaymentMethod == 'Fatura via E-mail':
+    f = 1
+elif PaymentMethod == 'Transferência Bancária':
+    f = 2
+else:
+    f = 3
+
+g = 0
+MonthlyCharges = st.sidebar.number_input('Valor da Mensalidade:',
+                                 step=00.01,
+                                 max_value=75)
+st.sidebar.write('You selected:', MonthlyCharges)
 
 user_info = {
     'Idoso(a)': SeniorCitizen,
@@ -84,7 +102,8 @@ user_info = {
     'Meses como Cliente': tenure,
     'Possui Serviço de Internet': InternetService,
     'Duração do Contrato': Contract,
-    'Fatura é via papel': PaperlessBilling
+    'Fatura é via papel': PaperlessBilling,
+    'Meio de Pagamento': PaymentMethod
 }
 features_info = pd.DataFrame(user_info, index=[0])
 features_info = features_info.T
@@ -95,7 +114,8 @@ user_data = {
     'Meses como Cliente': tenure,
     'Possui Serviço de Internet': c,
     'Duração do Contrato': d,
-    'Fatura é via papel': e
+    'Fatura é via papel': e,
+    'Meio de Pagamento': f
 }
 features_data = pd.DataFrame(user_data, index=[0])
 features_data = features_data.T

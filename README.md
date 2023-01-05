@@ -58,5 +58,4 @@
 - [APP](https://cd-churn.streamlit.app/)
 
 ![progress](https://progress-bar.dev/60/?title=completed "progresso")
-
 [![Linter](https://github.com/Prog-LucasAlves/CD_Churn/actions/workflows/Linter.yml/badge.svg)](https://github.com/Prog-LucasAlves/CD_Churn/actions/workflows/Linter.yml)
