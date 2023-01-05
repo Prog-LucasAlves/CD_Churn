@@ -92,7 +92,8 @@ else:
 
 MonthlyCharges = st.sidebar.number_input('Valor da Mensalidade:')
 st.sidebar.write('You selected:', MonthlyCharges)
-MonthlyCharges = MonthlyCharges
+
+TotalCharges = MonthlyCharges * tenure
 
 user_info = {
     'Idoso(a)': SeniorCitizen,
@@ -102,7 +103,8 @@ user_info = {
     'Duração do Contrato': Contract,
     'Fatura é via papel': PaperlessBilling,
     'Meio de Pagamento': PaymentMethod,
-    'Valor da Mensalidade': MonthlyCharges
+    'Valor da Mensalidade': MonthlyCharges,
+    'Valor Total dos Serviços desde o Inicio': TotalCharges
 }
 features_info = pd.DataFrame(user_info, index=[0])
 features_info = features_info.T
@@ -115,7 +117,8 @@ user_data = {
     'Duração do Contrato': d,
     'Fatura é via papel': e,
     'Meio de Pagamento': f,
-    'Valor da Mensalidade': MonthlyCharges
+    'Valor da Mensalidade': MonthlyCharges,
+    'Valor Total dos Serviços desde o Inicio': TotalCharges
 }
 features_data = pd.DataFrame(user_data, index=[0])
 features_data = features_data.T
