@@ -90,9 +90,9 @@ elif PaymentMethod == 'Transferência Bancária':
 else:
     f = 3
 
-g = 0
 MonthlyCharges = st.sidebar.number_input('Valor da Mensalidade:')
 st.sidebar.write('You selected:', MonthlyCharges)
+MonthlyCharges = MonthlyCharges
 
 user_info = {
     'Idoso(a)': SeniorCitizen,
@@ -101,7 +101,8 @@ user_info = {
     'Possui Serviço de Internet': InternetService,
     'Duração do Contrato': Contract,
     'Fatura é via papel': PaperlessBilling,
-    'Meio de Pagamento': PaymentMethod
+    'Meio de Pagamento': PaymentMethod,
+    'Valor da Mensalidade': MonthlyCharges
 }
 features_info = pd.DataFrame(user_info, index=[0])
 features_info = features_info.T
@@ -113,7 +114,8 @@ user_data = {
     'Possui Serviço de Internet': c,
     'Duração do Contrato': d,
     'Fatura é via papel': e,
-    'Meio de Pagamento': f
+    'Meio de Pagamento': f,
+    'Valor da Mensalidade': MonthlyCharges
 }
 features_data = pd.DataFrame(user_data, index=[0])
 features_data = features_data.T
