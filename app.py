@@ -18,15 +18,15 @@ st.sidebar.text('Selecione os Dados dos Cliente:')
 st.write("-----------------------------------------")
 
 st.sidebar.header('Informações dos Clientes:')
-a = int(0)
+a = 0
 SeniorCitizen = st.sidebar.selectbox('Cliente e Idoso(a):',
                                      ('Não', 'Sim'))
 st.sidebar.write('You selected:', SeniorCitizen)
 
 if SeniorCitizen == 'Não':
-    a = int(0)
+    a = 0
 if SeniorCitizen == 'Sim':
-    a = int(1)
+    a = 1
 
 b = 0
 Dependents = st.sidebar.selectbox('Cliente tem Dependente:',
@@ -45,13 +45,15 @@ st.sidebar.write('You selected:', tenure)
 
 c = 0
 InternetService = st.sidebar.selectbox('Possui Serviço de Internet:',
-                                       ('Não', 'Sim'))
+                                       ('Não', 'DSL'))
 st.sidebar.write('You Selected:', InternetService)
 
 if InternetService == 'Não':
     c = 0
-else:
+elif InternetService == 'DSL':
     c = 1
+else:
+    c = 0
 
 d = 0
 Contract = st.sidebar.selectbox('Duração do Contrato:',
@@ -77,8 +79,10 @@ else:
 
 f = 0
 PaymentMethod = st.sidebar.selectbox('Meio de Pagamento:',
-                                     ('Fatura via Correios', 'Fatura via E-mail',
-                                      'Transferência Bancária', 'Cartão de Credito'))
+                                     ('Fatura via Correios', 
+                                      'Fatura via E-mail',
+                                      'Transferência Bancária', 
+                                      'Cartão de Credito'))
 st.sidebar.write('You selected:', PaymentMethod)
 
 if PaymentMethod == 'Fatura via Correios':
@@ -94,6 +98,20 @@ MonthlyCharges = st.sidebar.number_input('Valor da Mensalidade:')
 st.sidebar.write('You selected:', MonthlyCharges)
 
 TotalCharges = MonthlyCharges * tenure
+
+'''
+g = 0
+if InternetService == 'Sim':
+    g = 0
+    OnlineSecurity = st.sidebar.selectbox('Possui Serviço de Segurança OnLine:',
+                                          ('Sim', 'Não'))
+    st.sidebar.write('You selected:', OnlineSecurity)
+    
+    if OnlineSecurity == 'Não':
+        g = 0
+    else:
+        g = 1
+'''
 
 user_info = {
     'Idoso(a)': SeniorCitizen,
