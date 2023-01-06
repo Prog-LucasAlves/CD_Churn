@@ -45,7 +45,7 @@ st.sidebar.write('You selected:', tenure)
 
 c = 0
 InternetService = st.sidebar.selectbox('Possui Serviço de Internet:',
-                                       ('Não', 'DSL'))
+                                       ('Não', 'DSL', 'Fibra Óptica'))
 st.sidebar.write('You Selected:', InternetService)
 
 if InternetService == 'Não':
@@ -53,7 +53,7 @@ if InternetService == 'Não':
 elif InternetService == 'DSL':
     c = 1
 else:
-    c = 0
+    c = 2
 
 d = 0
 Contract = st.sidebar.selectbox('Duração do Contrato:',
