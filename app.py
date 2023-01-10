@@ -99,10 +99,9 @@ st.sidebar.write('You selected:', MonthlyCharges)
 
 TotalCharges = MonthlyCharges * tenure
 
-'''
 g = 0
 if InternetService == 'Sim':
-    g = 0
+    OnlineSecurity_No_internet_service = 0
     OnlineSecurity = st.sidebar.selectbox('Possui Serviço de Segurança OnLine:',
                                           ('Sim', 'Não'))
     st.sidebar.write('You selected:', OnlineSecurity)
@@ -111,7 +110,9 @@ if InternetService == 'Sim':
         g = 0
     else:
         g = 1
-'''
+else:
+    OnlineSecurity_No_internet_service = 1
+    g = 0
 
 user_info = {
     'Idoso(a)': SeniorCitizen,
